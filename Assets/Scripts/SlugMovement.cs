@@ -17,6 +17,21 @@ public class SlugMovement : MonoBehaviour
     //the momentum rate can be changed so that you can choose how quickly the player's speed increases as they move
     public float momentumRate;
 
+    //just an idea here for us to mess with, these variables will allow it so you can increase your jump if you hold the space bar down longer.
+    //If we decide we don't like this, just set these two variables equal to one another.
+    public float jumpHeight;
+    
+
+    private bool isGrounded;
+    public Transform feetPos;
+    public float radius;
+    public LayerMask Ground;
+
+    //variables to calculate how long the player can jump
+    private float jumpTimeCounter;
+    public float jumpTime;
+    private bool isJumping;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +44,43 @@ public class SlugMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //we must call our player's movement method during each frame
+        //each frame we must checkt to see if the player is in a spot where they can jump
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, radius, Ground);
+
+        //if the player hits the space key and is grounded, they can jump
+        if(isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            rb.velocity = Vector2.up * jumpHeight;
+        }
+
+        //now we will test to see if the player is holding down the space key
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if(jumpTimeCounter > 0 && isJumping == true)
+            {
+                rb.velocity = Vector2.up * jumpHeight;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+            
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isJumping = false;
+        }
+        
+    }
+
+    void FixedUpdate()
+    {
         Move();
+        
     }
 
     void Move()
@@ -56,4 +106,5 @@ public class SlugMovement : MonoBehaviour
 
 
     }
+
 }
