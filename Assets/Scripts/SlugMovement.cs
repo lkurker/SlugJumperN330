@@ -125,6 +125,7 @@ public class SlugMovement : MonoBehaviour
 
         if(stickJump == true)
         {
+            //if else statements to determine which direcion the player character will move whe jumping based on their current rotation
             if(this.gameObject.transform.rotation.y == 0)
             {
                 rb.velocity = new Vector2(xStickForce * -1, yStickForce);
