@@ -92,7 +92,8 @@ public class SlugMovement : MonoBehaviour
         //by having the ground layer as a parameter even for the checkFront bool, we can have a much easier time creating areas for the slug to slide on
         touchingWall = Physics2D.OverlapCircle(checkFront.position, radius, Ground);
 
-        if(touchingWall == true && isGrounded == false && movement != 0)
+        //checking to see if the player is connected to a wall. they must release both the left and right movement key in order to free fall and stop sticking
+        if(touchingWall == true && isGrounded == false && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
         {
             wallStick = true;
         }
@@ -104,14 +105,13 @@ public class SlugMovement : MonoBehaviour
         //check to see if the slug is sticking to a wall
         if(wallStick == true)
         {
-            Debug.Log("Test");
             //we are constraining the speed at which the velocity of the character takes them down by clamping the y value between two seperate values
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -slideSpeed, float.MaxValue));
         }
 
         else if(wallStick == false)
         {
-            Debug.Log("Test2");
+           
             Move();
         }
 
