@@ -32,6 +32,18 @@ public class SlugMovement : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
 
+    //the following variables will apply directly to the player character sticking to walls
+    private bool touchingWall;
+    public Transform checkFront;
+    private bool wallStick;
+    public float slideSpeed;
+
+    //variables that will allow our slug to jump off walls
+    bool stickJump;
+    public float xStickForce;
+    public float yStickForce;
+    public float stickJumpTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +56,8 @@ public class SlugMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float movement = Input.GetAxisRaw("Horizontal");
+
         //each frame we must checkt to see if the player is in a spot where they can jump
         isGrounded = Physics2D.OverlapCircle(feetPos.position, radius, Ground);
 
@@ -74,18 +88,65 @@ public class SlugMovement : MonoBehaviour
         {
             isJumping = false;
         }
+
+        //by having the ground layer as a parameter even for the checkFront bool, we can have a much easier time creating areas for the slug to slide on
+        touchingWall = Physics2D.OverlapCircle(checkFront.position, radius, Ground);
+
+        if(touchingWall == true && isGrounded == false && movement != 0)
+        {
+            wallStick = true;
+        }
+        else
+        {
+            wallStick = false;
+        }
+
+        //check to see if the slug is sticking to a wall
+        if(wallStick == true)
+        {
+            Debug.Log("Test");
+            //we are constraining the speed at which the velocity of the character takes them down by clamping the y value between two seperate values
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -slideSpeed, float.MaxValue));
+        }
+
+        else if(wallStick == false)
+        {
+            Debug.Log("Test2");
+            Move();
+        }
+
+        //check to see if the player has initiated a wall jump
+        if(wallStick == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            stickJump = true;
+            //timer to set the wall jump to false
+            Invoke("stickJumpFalse", stickJumpTime);
+        }
+
+        if(stickJump == true)
+        {
+            if(this.gameObject.transform.rotation.y == 0)
+            {
+                rb.velocity = new Vector2(xStickForce * -1, yStickForce);
+            }
+
+            else 
+            {
+                rb.velocity = new Vector2(xStickForce * 1, yStickForce);
+            }
+            
+        }
+
+
+
         
     }
 
-    void FixedUpdate()
-    {
-        Move();
-        
-    }
 
     void Move()
     {
         //we will implement the momentum system within the movement method, which will cause the player character to gradually speed up
+
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             if (speed < maxSpeed)
@@ -101,10 +162,26 @@ public class SlugMovement : MonoBehaviour
         }
 
         float x = Input.GetAxisRaw("Horizontal");
+
+        if (x == -1)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+
+        else if (x == 1)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
         float moveBy = x * speed;
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
 
 
+    }
+
+    void stickJumpFalse()
+    {
+        stickJump = false;
     }
 
 }
