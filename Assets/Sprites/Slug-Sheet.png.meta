@@ -17,6 +17,24 @@ TextureImporter:
   - first:
       213: -7347246718343629588
     second: Slug-Sheet_4
+  - first:
+      213: -6564343561675202023
+    second: Slug-Sheet_5
+  - first:
+      213: -2984901136096067638
+    second: Slug-Sheet_6
+  - first:
+      213: -7932651474641726583
+    second: Slug-Sheet_7
+  - first:
+      213: -8930080030267456628
+    second: Slug-Sheet_8
+  - first:
+      213: 5657096799444544254
+    second: Slug-Sheet_9
+  - first:
+      213: 8096202615950798930
+    second: Slug-Sheet_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,7 +128,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 10
-        y: 114
+        y: 214
         width: 77
         height: 69
       alignment: 0
@@ -131,7 +149,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 114
+        y: 214
         width: 77
         height: 71
       alignment: 0
@@ -152,7 +170,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 215
-        y: 114
+        y: 214
         width: 72
         height: 69
       alignment: 0
@@ -172,8 +190,8 @@ TextureImporter:
       name: Slug-Sheet_3
       rect:
         serializedVersion: 2
-        x: 24
-        y: 5
+        x: 324
+        y: 205
         width: 70
         height: 88
       alignment: 0
@@ -193,8 +211,8 @@ TextureImporter:
       name: Slug-Sheet_4
       rect:
         serializedVersion: 2
-        x: 101
-        y: 14
+        x: 1
+        y: 114
         width: 96
         height: 43
       alignment: 0
@@ -206,6 +224,132 @@ TextureImporter:
       bones: []
       spriteID: ce439fb7906590a90800000000000000
       internalID: -7347246718343629588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 114
+        width: 76
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9122abe5f44c6e4a0800000000000000
+      internalID: -6564343561675202023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 114
+        width: 86
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf755d3b308396d0800000000000000
+      internalID: -2984901136096067638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 114
+        width: 83
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9835007438f89e190800000000000000
+      internalID: -7932651474641726583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 14
+        width: 89
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83491ca68bf11480800000000000000
+      internalID: -8930080030267456628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 14
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa24e6019b028e40800000000000000
+      internalID: 5657096799444544254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 14
+        width: 98
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250f559326d7b5070800000000000000
+      internalID: 8096202615950798930
       vertices: []
       indices: 
       edges: []
