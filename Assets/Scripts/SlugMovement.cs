@@ -67,6 +67,11 @@ public class SlugMovement : MonoBehaviour
         //each frame we must checkt to see if the player is in a spot where they can jump
         isGrounded = Physics2D.OverlapCircle(feetPos.position, radius, Ground);
 
+        if(isGrounded == true)
+        {
+            Debug.Log("Testing");
+        }
+
         //if the player hits the space key and is grounded, they can jump
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -241,7 +246,6 @@ public class SlugMovement : MonoBehaviour
 
     void stickJumpFalse()
     {
-        Debug.Log("Test");
         stickJump = false;
     }
 
