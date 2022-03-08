@@ -8,6 +8,9 @@ public class SlugMovement : MonoBehaviour
     //reference to our player's rigidbody
     Rigidbody2D rb;
 
+    //public bool value that determines how the slug sliding works
+    public bool checkKey;
+
     public float speed;
     public float maxSpeed;
 
@@ -20,7 +23,7 @@ public class SlugMovement : MonoBehaviour
     //just an idea here for us to mess with, these variables will allow it so you can increase your jump if you hold the space bar down longer.
     //If we decide we don't like this, just set these two variables equal to one another.
     public float jumpHeight;
-    
+
 
     private bool isGrounded;
     public Transform feetPos;
@@ -44,6 +47,9 @@ public class SlugMovement : MonoBehaviour
     public float yStickForce;
     public float stickJumpTime;
 
+    //private variable that determines if the slug can continue sticking to the wall or not
+    private bool canStick;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +68,7 @@ public class SlugMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(feetPos.position, radius, Ground);
 
         //if the player hits the space key and is grounded, they can jump
-        if(isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
@@ -72,7 +78,7 @@ public class SlugMovement : MonoBehaviour
         //now we will test to see if the player is holding down the space key
         if (Input.GetKey(KeyCode.Space))
         {
-            if(jumpTimeCounter > 0 && isJumping == true)
+            if (jumpTimeCounter > 0 && isJumping == true)
             {
                 rb.velocity = Vector2.up * jumpHeight;
                 jumpTimeCounter -= Time.deltaTime;
@@ -81,7 +87,7 @@ public class SlugMovement : MonoBehaviour
             {
                 isJumping = false;
             }
-            
+
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
@@ -92,55 +98,108 @@ public class SlugMovement : MonoBehaviour
         //by having the ground layer as a parameter even for the checkFront bool, we can have a much easier time creating areas for the slug to slide on
         touchingWall = Physics2D.OverlapCircle(checkFront.position, radius, Ground);
 
-        //checking to see if the player is connected to a wall. they must release both the left and right movement key in order to free fall and stop sticking
-        if(touchingWall == true && isGrounded == false && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+        //the player's rotation will determine the mechanics involving moving away from the wall while slugboy is falling
+        if (this.gameObject.transform.rotation.eulerAngles.y == 0)
         {
-            wallStick = true;
-        }
-        else
-        {
-            wallStick = false;
+            //checking to see if the player is connected to a wall. they must release both the left and right movement key in order to free fall and stop sticking
+            if (touchingWall == true && isGrounded == false && checkKey == false && (Input.GetKey(KeyCode.D) || canStick == true))
+            {
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+                {
+                    wallStick = true;
+                    canStick = true;
+                }
+
+                else
+                {
+                    wallStick = false;
+                    canStick = false;
+                }
+
+            }
+            else if (touchingWall == true && isGrounded == false && checkKey == true)
+            {
+                wallStick = true;
+            }
+
+            else
+            {
+
+                wallStick = false;
+                canStick = false;
+
+            }
         }
 
+        else
+        {
+            //checking to see if the player is connected to a wall. they must release both the left and right movement key in order to free fall and stop sticking
+            if (touchingWall == true && isGrounded == false && checkKey == false && (Input.GetKey(KeyCode.A) || canStick == true))
+            {
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+                {
+                    wallStick = true;
+                    canStick = true;
+                }
+                else
+                {
+                    wallStick = false;
+                    canStick = false;
+                }
+
+            }
+            else if (touchingWall == true && isGrounded == false && checkKey == true)
+            {
+                wallStick = true;
+            }
+
+            else
+            {
+                wallStick = false;
+                canStick = false;
+            }
+        }
+
+
         //check to see if the slug is sticking to a wall
-        if(wallStick == true)
+        if (wallStick == true)
         {
             //we are constraining the speed at which the velocity of the character takes them down by clamping the y value between two seperate values
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -slideSpeed, float.MaxValue));
         }
 
-        else if(wallStick == false)
+        else if (wallStick == false)
         {
-           
+
             Move();
         }
 
         //check to see if the player has initiated a wall jump
-        if(wallStick == true && Input.GetKeyDown(KeyCode.Space))
+        if (wallStick == true && Input.GetKeyDown(KeyCode.Space))
         {
             stickJump = true;
             //timer to set the wall jump to false
             Invoke("stickJumpFalse", stickJumpTime);
         }
 
-        if(stickJump == true)
+        if (stickJump == true)
         {
             //if else statements to determine which direcion the player character will move whe jumping based on their current rotation
-            if(this.gameObject.transform.rotation.y == 0)
+            if (this.gameObject.transform.rotation.y == 0)
             {
                 rb.velocity = new Vector2(xStickForce * -1, yStickForce);
             }
 
-            else 
+            else
             {
                 rb.velocity = new Vector2(xStickForce * 1, yStickForce);
             }
-            
+
         }
 
 
 
-        
+
     }
 
 
@@ -182,7 +241,10 @@ public class SlugMovement : MonoBehaviour
 
     void stickJumpFalse()
     {
+        Debug.Log("Test");
         stickJump = false;
     }
+
+
 
 }

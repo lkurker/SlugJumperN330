@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f69d1067ee7754ea7f090c5ef4198c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkKey: 0
   speed: 5
   maxSpeed: 10
   momentumRate: 5
@@ -143,7 +144,7 @@ MonoBehaviour:
   slideSpeed: 2
   xStickForce: 40
   yStickForce: 20
-  stickJumpTime: 0.05
+  stickJumpTime: 0.01
 --- !u!50 &3923112957142298818
 Rigidbody2D:
   serializedVersion: 4
