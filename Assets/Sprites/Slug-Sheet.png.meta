@@ -35,6 +35,15 @@ TextureImporter:
   - first:
       213: 8096202615950798930
     second: Slug-Sheet_10
+  - first:
+      213: -3828558201079323676
+    second: Slug-Sheet_11
+  - first:
+      213: -6641283650323049484
+    second: Slug-Sheet_12
+  - first:
+      213: 3859155462815629251
+    second: Slug-Sheet_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,7 +137,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 10
-        y: 214
+        y: 314
         width: 77
         height: 69
       alignment: 0
@@ -149,7 +158,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 214
+        y: 314
         width: 77
         height: 71
       alignment: 0
@@ -170,7 +179,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 215
-        y: 214
+        y: 314
         width: 72
         height: 69
       alignment: 0
@@ -191,7 +200,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 324
-        y: 205
+        y: 305
         width: 70
         height: 88
       alignment: 0
@@ -212,7 +221,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 114
+        y: 214
         width: 96
         height: 43
       alignment: 0
@@ -233,7 +242,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 111
-        y: 114
+        y: 214
         width: 76
         height: 70
       alignment: 0
@@ -254,7 +263,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 114
+        y: 214
         width: 86
         height: 67
       alignment: 0
@@ -275,7 +284,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 307
-        y: 114
+        y: 214
         width: 83
         height: 70
       alignment: 0
@@ -296,7 +305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 14
+        y: 114
         width: 89
         height: 67
       alignment: 0
@@ -317,7 +326,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 104
-        y: 14
+        y: 114
         width: 89
         height: 70
       alignment: 0
@@ -338,7 +347,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 201
-        y: 14
+        y: 114
         width: 98
         height: 67
       alignment: 0
@@ -350,6 +359,69 @@ TextureImporter:
       bones: []
       spriteID: 250f559326d7b5070800000000000000
       internalID: 8096202615950798930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 14
+        width: 87
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e322c6c99a3edac0800000000000000
+      internalID: -3828558201079323676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 14
+        width: 91
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f392e105bb65d3a0800000000000000
+      internalID: -6641283650323049484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 14
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf322e52797e8530800000000000000
+      internalID: 3859155462815629251
       vertices: []
       indices: 
       edges: []
