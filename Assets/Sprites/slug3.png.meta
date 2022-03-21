@@ -1,49 +1,49 @@
 fileFormatVersion: 2
-guid: 561fe7b4f3ad9f74c899ac81d5f2eae0
+guid: d9cb74093b3f8be46b5bd671f2fa9b7d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2051527457826873238
-    second: Slug-Sheet_0
+      213: 7859302258071456012
+    second: slug3_0
   - first:
-      213: -6682369029752980719
-    second: Slug-Sheet_1
+      213: 2497939404474729489
+    second: slug3_1
   - first:
-      213: 2140688811894316489
-    second: Slug-Sheet_2
+      213: 309567706830057266
+    second: slug3_2
   - first:
-      213: 8055159961827238923
-    second: Slug-Sheet_3
+      213: 8449383856030298465
+    second: slug3_3
   - first:
-      213: -7347246718343629588
-    second: Slug-Sheet_4
+      213: 7462743440888985652
+    second: slug3_4
   - first:
-      213: -6564343561675202023
-    second: Slug-Sheet_5
+      213: -3842751369669138400
+    second: slug3_5
   - first:
-      213: -2984901136096067638
-    second: Slug-Sheet_6
+      213: 4538363525748122689
+    second: slug3_6
   - first:
-      213: -7932651474641726583
-    second: Slug-Sheet_7
+      213: 8216015735884607596
+    second: slug3_7
   - first:
-      213: -8930080030267456628
-    second: Slug-Sheet_8
+      213: -7647850313495210333
+    second: slug3_8
   - first:
-      213: 5657096799444544254
-    second: Slug-Sheet_9
+      213: -475878844494851862
+    second: slug3_9
   - first:
-      213: 8096202615950798930
-    second: Slug-Sheet_10
+      213: -5520610657296631982
+    second: slug3_10
   - first:
-      213: -3828558201079323676
-    second: Slug-Sheet_11
+      213: -8549491516683253540
+    second: slug3_11
   - first:
-      213: -6641283650323049484
-    second: Slug-Sheet_12
+      213: -4564363245730819521
+    second: slug3_12
   - first:
-      213: 3859155462815629251
-    second: Slug-Sheet_13
+      213: -8129991560234498896
+    second: slug3_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slug-Sheet_0
+      name: slug3_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 314
-        width: 77
-        height: 69
+        x: 20
+        y: 628
+        width: 154
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a60e44585a28783e0800000000000000
-      internalID: -2051527457826873238
+      spriteID: c0946ca63c9d11d60800000000000000
+      internalID: 7859302258071456012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_1
+      name: slug3_1
       rect:
         serializedVersion: 2
-        x: 110
-        y: 314
-        width: 77
-        height: 71
+        x: 220
+        y: 628
+        width: 154
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11b708ba5c47343a0800000000000000
-      internalID: -6682369029752980719
+      spriteID: 114ca2a57a67aa220800000000000000
+      internalID: 2497939404474729489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_2
+      name: slug3_2
       rect:
         serializedVersion: 2
-        x: 215
-        y: 314
-        width: 72
-        height: 69
+        x: 430
+        y: 628
+        width: 144
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cd1d9fe12145bd10800000000000000
-      internalID: 2140688811894316489
+      spriteID: 23fa98f603ecb4400800000000000000
+      internalID: 309567706830057266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_3
+      name: slug3_3
       rect:
         serializedVersion: 2
-        x: 324
-        y: 305
-        width: 70
-        height: 88
+        x: 648
+        y: 610
+        width: 140
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,104 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0469a5ae4da9cf60800000000000000
-      internalID: 8055159961827238923
+      spriteID: 1613b9da9dd324570800000000000000
+      internalID: 8449383856030298465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 214
-        width: 96
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce439fb7906590a90800000000000000
-      internalID: -7347246718343629588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slug-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 214
-        width: 76
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9122abe5f44c6e4a0800000000000000
-      internalID: -6564343561675202023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slug-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 214
-        width: 86
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acf755d3b308396d0800000000000000
-      internalID: -2984901136096067638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slug-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 307
-        y: 214
-        width: 83
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9835007438f89e190800000000000000
-      internalID: -7932651474641726583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slug-Sheet_8
+      name: slug3_4
       rect:
         serializedVersion: 2
         x: 2
-        y: 114
-        width: 89
-        height: 67
+        y: 428
+        width: 192
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c83491ca68bf11480800000000000000
-      internalID: -8930080030267456628
+      spriteID: 4387014ce9df09760800000000000000
+      internalID: 7462743440888985652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_9
+      name: slug3_5
       rect:
         serializedVersion: 2
-        x: 104
-        y: 114
-        width: 89
-        height: 70
+        x: 222
+        y: 428
+        width: 152
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efa24e6019b028e40800000000000000
-      internalID: 5657096799444544254
+      spriteID: 028a9b23dfdcbaac0800000000000000
+      internalID: -3842751369669138400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_10
+      name: slug3_6
       rect:
         serializedVersion: 2
-        x: 201
-        y: 114
-        width: 98
-        height: 67
+        x: 410
+        y: 428
+        width: 172
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 250f559326d7b5070800000000000000
-      internalID: 8096202615950798930
+      spriteID: 1446ec5d4918bfe30800000000000000
+      internalID: 4538363525748122689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_11
+      name: slug3_7
       rect:
         serializedVersion: 2
-        x: 5
-        y: 14
-        width: 87
-        height: 65
+        x: 614
+        y: 428
+        width: 166
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,20 +294,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e322c6c99a3edac0800000000000000
-      internalID: -3828558201079323676
+      spriteID: c60fb6e08c6250270800000000000000
+      internalID: 8216015735884607596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_12
+      name: slug3_8
       rect:
         serializedVersion: 2
-        x: 103
-        y: 14
-        width: 91
-        height: 59
+        x: 4
+        y: 228
+        width: 178
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f392e105bb65d3a0800000000000000
-      internalID: -6641283650323049484
+      spriteID: 3a612c0f8a06dd590800000000000000
+      internalID: -7647850313495210333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slug-Sheet_13
+      name: slug3_9
       rect:
         serializedVersion: 2
-        x: 211
-        y: 14
-        width: 83
-        height: 64
+        x: 208
+        y: 228
+        width: 178
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,8 +336,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cf322e52797e8530800000000000000
-      internalID: 3859155462815629251
+      spriteID: ae0d2c556b65569f0800000000000000
+      internalID: -475878844494851862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug3_10
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 228
+        width: 196
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257399c4bd9d263b0800000000000000
+      internalID: -5520610657296631982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug3_11
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 28
+        width: 174
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd801e143ca1a5980800000000000000
+      internalID: -8549491516683253540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug3_12
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 28
+        width: 182
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f329d50afcf18a0c0800000000000000
+      internalID: -4564363245730819521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug3_13
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 28
+        width: 166
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b48c4120c77c2f80800000000000000
+      internalID: -8129991560234498896
       vertices: []
       indices: 
       edges: []
