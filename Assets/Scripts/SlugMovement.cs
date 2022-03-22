@@ -50,10 +50,14 @@ public class SlugMovement : MonoBehaviour
     //private variable that determines if the slug can continue sticking to the wall or not
     private bool canStick;
 
+    private Animator animator;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = this.GetComponent<Animator>();
 
         // we will set the baseSpeed value to the value of the speed value, so that whenever a character stops moving, their speed will revert to it's original value
         baseSpeed = speed;
@@ -67,10 +71,7 @@ public class SlugMovement : MonoBehaviour
         //each frame we must checkt to see if the player is in a spot where they can jump
         isGrounded = Physics2D.OverlapCircle(feetPos.position, radius, Ground);
 
-        if(isGrounded == true)
-        {
-            Debug.Log("Testing");
-        }
+        animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
 
         //if the player hits the space key and is grounded, they can jump
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
@@ -78,6 +79,7 @@ public class SlugMovement : MonoBehaviour
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpHeight;
+            animator.SetTrigger("Jump");
         }
 
         //now we will test to see if the player is holding down the space key
