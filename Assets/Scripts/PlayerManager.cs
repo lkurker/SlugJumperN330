@@ -15,6 +15,10 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       if(this.transform.position.y < -10)
+        {
+            
+            this.transform.position = lastCheckPointPos;
+        } 
     }
 }
