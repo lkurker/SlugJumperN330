@@ -16,9 +16,31 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
        if(this.transform.position.y < -10)
+       {
+
+            Respawn();
+       }
+
+
+    }
+
+    //respawn method that places slug boi back at the last checkpoint
+    void Respawn()
+    {
+        this.transform.position = lastCheckPointPos;
+    }
+
+    //collision method to determine if the user has come into contact with any hazardous materials in the world
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.tag == "Enemy")
         {
-            
-            this.transform.position = lastCheckPointPos;
-        } 
+            Respawn();
+        }
+
+        if(collision.transform.tag == "Spike")
+        {
+            Respawn();
+        }
     }
 }
