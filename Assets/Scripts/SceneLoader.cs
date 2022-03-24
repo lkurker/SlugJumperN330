@@ -22,9 +22,4 @@ public class SceneLoader : MonoBehaviour
         Debug.Log("Quit!");
     }
 
-    //load game
-    public void loadGame()
-    {
-        SceneManager.LoadScene("LevelSelect");
-    }
 }
