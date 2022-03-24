@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+
+    private int lastLevelPlayed;
+
     // play button
     public void playGame() 
     {
     // change to the game scene
-SceneManager.LoadScene ("LevelOne");
+        SceneManager.LoadScene ("LevelOne");
     }
 
     //quit button
@@ -17,5 +20,11 @@ SceneManager.LoadScene ("LevelOne");
     {
         Application.Quit();
         Debug.Log("Quit!");
+    }
+
+    //load game
+    public void loadGame()
+    {
+        SceneManager.LoadScene("LevelSelect");
     }
 }
