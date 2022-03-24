@@ -18,4 +18,6 @@ public class CameraMovement2 : MonoBehaviour
         Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, smoothness * Time.fixedDeltaTime);
         transform.position = smoothPosition;
     }
+
+    
 }

@@ -278,12 +278,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 484593818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b0b6ae89f9a004c83fbcfae7ea1773, type: 3}
+  m_Script: {fileID: 11500000, guid: 838be63c004592c49b6d4ed05acd3b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slugBoy: {fileID: 351449409}
-  offset: {x: 0, y: 0, z: -10}
+  xDistance: 10
   smoothness: 7
+  pullBack: -10
+  cameraMomentum: 5
 --- !u!1001 &1229305382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -536,7 +538,7 @@ Transform:
   m_GameObject: {fileID: 1366947701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.058981, y: -2.09, z: 0}
-  m_LocalScale: {x: 43.062, y: 1, z: 1}
+  m_LocalScale: {x: 285.28577, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
