@@ -13,6 +13,12 @@ public class SceneLoader : MonoBehaviour
         // Debug.Log("Launch lvl 1");
     }
 
+    // load button
+    public void chooseLevel()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
     //quit button
     public void QuitGame()
     {
