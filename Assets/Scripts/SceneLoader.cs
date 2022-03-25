@@ -5,11 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+
+    int lastLevelPlayed;
+
     // play button
     public void playGame() 
     {
     // change to the game scene
-        SceneManager.LoadScene ("LevelOne");
+        // we will base which level the player will continue on from the playerprefs
+        if(PlayerPrefs.GetInt("lastLevelPlayed") == 2)
+        {
+            SceneManager.LoadScene("LevelOne");
+        }
+        else if(PlayerPrefs.GetInt("lastLevelPlayed") == 4)
+        {
+            SceneManager.LoadScene("LevelTwo");
+        }
+        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 5)
+        {
+            SceneManager.LoadScene("LevelThree");
+        }
+        else
+        {
+            SceneManager.LoadScene("LevelOne");
+        }
+
         // Debug.Log("Launch lvl 1");
     }
 
