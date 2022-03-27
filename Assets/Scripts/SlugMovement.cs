@@ -36,7 +36,7 @@ public class SlugMovement : MonoBehaviour
     private bool isJumping;
 
     //the following variables will apply directly to the player character sticking to walls
-    private bool touchingWall;
+    public static bool touchingWall;
     public Transform checkFront;
     private bool wallStick;
     public float slideSpeed;
@@ -251,6 +251,7 @@ public class SlugMovement : MonoBehaviour
         stickJump = false;
     }
 
+    
 
 
 }

@@ -13,12 +13,17 @@ public class EndLevel : MonoBehaviour
     {
         ContinueScreen.SetActive(false);
         levelIsComplete = false;
+        Time.timeScale = 1f;
     }
     void Update()
     {
         if(levelIsComplete == true)
         {
             levelEnded();
+        }
+        else
+        {
+            ContinueScreen.SetActive(false);
         }
     }
 
@@ -44,7 +49,11 @@ public class EndLevel : MonoBehaviour
         }
         else
         {
+            Time.timeScale = 1f;
+            ContinueScreen.SetActive(false);
+            levelIsComplete = false;
             SceneManager.LoadScene("OpeningScene");
+
         }
     }
 

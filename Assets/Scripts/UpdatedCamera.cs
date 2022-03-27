@@ -29,7 +29,10 @@ public class UpdatedCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
-        cameraShift();
+        if(SlugMovement.touchingWall == false)
+        {
+            cameraShift();
+        }
         Follow();
     }
 
