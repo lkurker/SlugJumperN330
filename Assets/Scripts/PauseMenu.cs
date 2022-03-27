@@ -26,7 +26,10 @@ public class PauseMenu : MonoBehaviour {
             }
             else
             {
-                Pause();
+                if(EndLevel.levelIsComplete == false)
+                {
+                    Pause();
+                }
             }
         }
     }
@@ -43,7 +46,7 @@ public class PauseMenu : MonoBehaviour {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-        Debug.Log("Game is paused");
+        
     }
 
     public void LoadMenu()
