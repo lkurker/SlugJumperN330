@@ -79,7 +79,7 @@ public class SlugMovement : MonoBehaviour
             animator.SetBool("Jump", true);
         }
 
-        else
+        else if(isJumping == false)
         {
             animator.SetBool("Jump", false);
         }
