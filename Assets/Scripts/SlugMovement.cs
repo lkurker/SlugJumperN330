@@ -73,13 +73,24 @@ public class SlugMovement : MonoBehaviour
 
         animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
 
+        //set the animation jump
+        if(isJumping == true)
+        {
+            animator.SetBool("Jump", true);
+        }
+
+        else
+        {
+            animator.SetBool("Jump", false);
+        }
+
         //if the player hits the space key and is grounded, they can jump
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpHeight;
-            animator.SetTrigger("Jump");
+            
         }
 
         //now we will test to see if the player is holding down the space key
