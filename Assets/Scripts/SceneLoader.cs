@@ -69,5 +69,12 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("LevelThree");
         // Debug.Log("Launch lvl 3");
     }
+
+    // back button
+    public void backButton()
+    {
+        // take player back to main menu
+        SceneManager.LoadScene("OpeningScene");
+    }
     
 }
