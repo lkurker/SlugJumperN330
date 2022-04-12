@@ -763,6 +763,10 @@ PrefabInstance:
       propertyPath: slugBoy
       value: 
       objectReference: {fileID: 351449409}
+    - target: {fileID: 5538471311519475402, guid: 6ba5698293c2315408f9cfd0a4eac32e, type: 3}
+      propertyPath: pullBack
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5538471311519475406, guid: 6ba5698293c2315408f9cfd0a4eac32e, type: 3}
       propertyPath: m_Name
       value: Main Camera

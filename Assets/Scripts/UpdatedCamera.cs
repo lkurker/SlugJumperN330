@@ -10,6 +10,7 @@ public class UpdatedCamera : MonoBehaviour
     public float pullBack;
     public float cameraMomentum;
     private float newXposition;
+  
 
     //float variables to determine how long the user has been holding down in one direction or another
     private float moveRight;
@@ -33,6 +34,7 @@ public class UpdatedCamera : MonoBehaviour
         {
             cameraShift();
         }
+
         Follow();
     }
 
@@ -79,7 +81,7 @@ public class UpdatedCamera : MonoBehaviour
 
     private void shiftRight()
     {
-        Debug.Log("Move Right");
+        
 
         if (newXposition < xDistance)
         {
@@ -91,13 +93,15 @@ public class UpdatedCamera : MonoBehaviour
 
     private void shiftLeft()
     {
-        Debug.Log("Move Left");
+        
         if(newXposition > reversexDistance)
         {
             newXposition -= cameraMomentum * Time.deltaTime;
             offset = new Vector3(newXposition, 0, pullBack);
         }
     }
+
+    
 
 
 }

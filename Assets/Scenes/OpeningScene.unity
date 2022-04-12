@@ -206,9 +206,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 746742348}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: chooseLevel
+      - m_Target: {fileID: 1354787947}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -218,9 +218,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1354787947}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 746742348}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: chooseLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -334,6 +334,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &522019936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3200959584948649065, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
+  m_PrefabInstance: {fileID: 3200959583062744360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &522019938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522019936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f746648c0b1cc4d8301e2a9a3ab956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &553022711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1149,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 746742348}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: playGame
+        m_MethodName: playSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1142,9 +1159,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1354787947}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 746742348}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: playGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1278,6 +1295,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3200959584392327489, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
+      propertyPath: m_TagString
+      value: MenuSound
+      objectReference: {fileID: 0}
     - target: {fileID: 3200959584948649065, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
       propertyPath: m_Name
       value: Audio

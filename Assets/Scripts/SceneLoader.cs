@@ -7,6 +7,8 @@ public class SceneLoader : MonoBehaviour
 {
 
     int lastLevelPlayed;
+    
+    
 
     // play button
     public void playGame() 
@@ -76,5 +78,7 @@ public class SceneLoader : MonoBehaviour
         // take player back to main menu
         SceneManager.LoadScene("OpeningScene");
     }
+
+    
     
 }
