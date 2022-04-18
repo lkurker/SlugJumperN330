@@ -66,6 +66,8 @@ public class SlugMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("isGrounded", isGrounded);
+
         float movement = Input.GetAxisRaw("Horizontal");
 
         //each frame we must checkt to see if the player is in a spot where they can jump
@@ -73,23 +75,14 @@ public class SlugMovement : MonoBehaviour
 
         animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
 
-        //set the animation jump
-        if(isJumping == true)
-        {
-            animator.SetBool("Jump", true);
-        }
-
-        else if(isJumping == false)
-        {
-            animator.SetBool("Jump", false);
-        }
-
         //if the player hits the space key and is grounded, they can jump
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetTrigger("Jump");
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpHeight;
+            
             
         }
 
@@ -111,6 +104,7 @@ public class SlugMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
+            animator.SetBool("Jump", false);
         }
 
         //by having the ground layer as a parameter even for the checkFront bool, we can have a much easier time creating areas for the slug to slide on
@@ -217,6 +211,8 @@ public class SlugMovement : MonoBehaviour
 
 
 
+        //checking to see the velocity of the rb so that it can change the animation of the player
+        animator.SetFloat("yVelocity", rb.velocity.y);
 
     }
 
