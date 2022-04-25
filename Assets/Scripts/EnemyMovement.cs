@@ -50,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
         {
             if (this.transform.position.x > moveDestination || this.transform.position.x == startingPoint.x || this.transform.position.x < startingPoint.x)
             {
-                Debug.Log("Testing");
+                
                 counter = 0;
                 Invoke("Move", delayTime);
             }
@@ -64,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
         {
             if (this.transform.position.x < moveDestination || this.transform.position.x == startingPoint.x || this.transform.position.x > startingPoint.x)
             {
-                Debug.Log("Testing");
+                
                 counter = 0;
                 Invoke("Move", delayTime);
             }
@@ -129,7 +129,6 @@ public class EnemyMovement : MonoBehaviour
             }
             else 
             {
-                Debug.Log("Testing2");
                 rb.velocity = new Vector2(speed * x, rb.velocity.y);
             }
 
