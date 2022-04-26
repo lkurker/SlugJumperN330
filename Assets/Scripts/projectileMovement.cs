@@ -35,7 +35,7 @@ public class projectileMovement : MonoBehaviour
         {
             Debug.Log("IS THIS WORKING?!?!?!");
             //set the velocity of the rigidbody in the direction of the slug
-            rb.velocity = direction * speed;
+            rb.velocity = direction * speed * Time.deltaTime;
         }
     }
 
