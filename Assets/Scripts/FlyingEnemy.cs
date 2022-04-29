@@ -10,6 +10,7 @@ public class FlyingEnemy : MonoBehaviour
     public float nextWaypointDistance = 3f;
     public float seekRange;
     private float slugDistance;
+    private Transform currentDirection;
 
     public Transform enemySprite;
 
@@ -91,11 +92,11 @@ public class FlyingEnemy : MonoBehaviour
         //check to see if the enemy needs to rotate
         if(force.x >= 0.01f)
         {
-            enemySprite.localScale = new Vector3(-1f, 1f, 1f);
+            enemySprite.localScale = new Vector3(-2f, 2f, 1f);
         }
         else if(force.x <= -0.01f)
         {
-            enemySprite.localScale = new Vector3(1f, 1f, 1f);
+            enemySprite.localScale = new Vector3(2f, 2f, 1f);
         }
     }
 }
