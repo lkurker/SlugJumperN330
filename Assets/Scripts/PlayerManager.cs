@@ -6,6 +6,8 @@ public class PlayerManager : MonoBehaviour
 {
     public static Vector2 lastCheckPointPos;
 
+    private AudioSource SlugSplat1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +19,9 @@ public class PlayerManager : MonoBehaviour
     {
        if(this.transform.position.y < -10)
        {
-
             Respawn();
+
+            SlugSplat1.Play();
        }
 
 
@@ -35,11 +38,15 @@ public class PlayerManager : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
+            SlugSplat1.Play();
+
             Respawn();
         }
 
         if(collision.transform.tag == "Spike")
         {
+            SlugSplat1.Play();
+
             Respawn();
         }
     }
