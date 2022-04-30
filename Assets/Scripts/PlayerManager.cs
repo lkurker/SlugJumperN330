@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SlugSplat1 = GameObject.FindGameObjectWithTag("PlayerDeathSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,16 +38,16 @@ public class PlayerManager : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
-            SlugSplat1.Play();
-
             Respawn();
+
+            SlugSplat1.Play();
         }
 
         if(collision.transform.tag == "Spike")
         {
-            SlugSplat1.Play();
-
             Respawn();
+
+            SlugSplat1.Play();
         }
     }
 }

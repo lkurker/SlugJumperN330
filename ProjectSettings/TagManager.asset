@@ -9,6 +9,7 @@ TagManager:
   - MenuSound
   - Platform
   - Wall
+  - PlayerDeathSound
   layers:
   - Default
   - TransparentFX
