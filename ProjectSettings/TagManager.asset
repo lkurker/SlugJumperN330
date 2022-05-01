@@ -9,15 +9,18 @@ TagManager:
   - MenuSound
   - Platform
   - Wall
+  - PlayerDeathSound
+  - PlayerJump
+  - PlayerLand
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Projectile
   - Ground
   - 
   - 
