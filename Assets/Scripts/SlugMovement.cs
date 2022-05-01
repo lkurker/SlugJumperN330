@@ -51,6 +51,9 @@ public class SlugMovement : MonoBehaviour
     private bool canStick;
 
     private Animator animator;
+
+    private AudioSource SlugJump1;
+    private AudioSource SlugLand1;
     
 
     // Start is called before the first frame update
@@ -64,6 +67,10 @@ public class SlugMovement : MonoBehaviour
 
         //since the player will not have jumped to begin with, set it to 0
         hasJumped = 0;
+
+        // Sounds
+        SlugJump1 = GameObject.FindGameObjectWithTag("PlayerJump").GetComponent<AudioSource>();
+        SlugLand1 = GameObject.FindGameObjectWithTag("PlayerLand").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -90,7 +97,7 @@ public class SlugMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpHeight;
 
             //PLAY THE JUMP SOUND HERE LEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            
+            SlugJump1.Play();
             
         }
 
@@ -199,6 +206,7 @@ public class SlugMovement : MonoBehaviour
         {
             stickJump = true;
             //ALSO PLAY THE JUMP SOUND HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            SlugJump1.Play();
 
             //timer to set the wall jump to false
             Invoke("stickJumpFalse", stickJumpTime);
@@ -274,6 +282,7 @@ public class SlugMovement : MonoBehaviour
         if(hasJumped == 1 && isGrounded == true)
         {
             //PLAY THE LANDING SOUND HERE LEE1!!!!!!!!!!!!!!!!!!!!!!
+            SlugLand1.Play();
 
             hasJumped = 0;
         }
