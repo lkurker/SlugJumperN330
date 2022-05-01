@@ -182,5 +182,5 @@ MonoBehaviour:
   slugBoy: {fileID: 0}
   xDistance: 5
   smoothness: 7
-  pullBack: -40
+  pullBack: -10
   cameraMomentum: 2

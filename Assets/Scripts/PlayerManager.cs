@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
 
     private AudioSource SlugSplat1;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,10 @@ public class PlayerManager : MonoBehaviour
     //respawn method that places slug boi back at the last checkpoint
     void Respawn()
     {
-        this.transform.position = lastCheckPointPos;
+        this.gameObject.SetActive(false);
+        SlugSplat1.Play();
+        //delay the respawning of slug boy
+        Invoke("lastCheckpointReached", 2);
     }
 
     //collision method to determine if the user has come into contact with any hazardous materials in the world
@@ -42,14 +47,22 @@ public class PlayerManager : MonoBehaviour
         {
             Respawn();
 
-            SlugSplat1.Play();
+            
         }
 
         if(collision.transform.tag == "Spike")
         {
             Respawn();
 
-            SlugSplat1.Play();
+            
         }
+    }
+
+    //set slugboy back to his previous position
+    void lastCheckpointReached()
+    {
+        this.gameObject.SetActive(true);
+        this.transform.position = lastCheckPointPos;
+
     }
 }
