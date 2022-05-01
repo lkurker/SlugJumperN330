@@ -76,6 +76,10 @@ public class SlugMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        SlugJump1 = GameObject.FindGameObjectWithTag("PlayerJump").GetComponent<AudioSource>();
+        SlugLand1 = GameObject.FindGameObjectWithTag("PlayerLand").GetComponent<AudioSource>();
+
         animator.SetBool("isGrounded", isGrounded);
 
         float movement = Input.GetAxisRaw("Horizontal");
