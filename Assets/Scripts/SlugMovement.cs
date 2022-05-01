@@ -23,7 +23,7 @@ public class SlugMovement : MonoBehaviour
     //just an idea here for us to mess with, these variables will allow it so you can increase your jump if you hold the space bar down longer.
     //If we decide we don't like this, just set these two variables equal to one another.
     public float jumpHeight;
-
+    private float hasJumped;
 
     private bool isGrounded;
     public Transform feetPos;
@@ -61,6 +61,9 @@ public class SlugMovement : MonoBehaviour
 
         // we will set the baseSpeed value to the value of the speed value, so that whenever a character stops moving, their speed will revert to it's original value
         baseSpeed = speed;
+
+        //since the player will not have jumped to begin with, set it to 0
+        hasJumped = 0;
     }
 
     // Update is called once per frame
@@ -75,6 +78,9 @@ public class SlugMovement : MonoBehaviour
 
         animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
 
+        //script to tell if slugboy has landed
+        checkIfLanded();
+
         //if the player hits the space key and is grounded, they can jump
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -82,6 +88,8 @@ public class SlugMovement : MonoBehaviour
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpHeight;
+
+            //PLAY THE JUMP SOUND HERE LEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             
             
         }
@@ -190,6 +198,8 @@ public class SlugMovement : MonoBehaviour
         if (wallStick == true && Input.GetKeyDown(KeyCode.Space))
         {
             stickJump = true;
+            //ALSO PLAY THE JUMP SOUND HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
             //timer to set the wall jump to false
             Invoke("stickJumpFalse", stickJumpTime);
         }
@@ -256,6 +266,24 @@ public class SlugMovement : MonoBehaviour
     void stickJumpFalse()
     {
         stickJump = false;
+    }
+
+    //method that will check to see if slug boy has jumped and then landed on the ground
+    void checkIfLanded()
+    {
+        if(hasJumped == 1 && isGrounded == true)
+        {
+            //PLAY THE LANDING SOUND HERE LEE1!!!!!!!!!!!!!!!!!!!!!!
+
+            hasJumped = 0;
+        }
+
+        //if the player has jumped then make hasJumped = to 1
+        if(isJumping == true)
+        {
+            hasJumped = 1;
+        }
+
     }
 
     
