@@ -17,7 +17,9 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(this.transform.position.y < -10)
+        SlugSplat1 = GameObject.FindGameObjectWithTag("PlayerDeathSound").GetComponent<AudioSource>();
+
+        if (this.transform.position.y < -10)
        {
             Respawn();
 
