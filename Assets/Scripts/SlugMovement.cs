@@ -288,7 +288,7 @@ public class SlugMovement : MonoBehaviour
         }
 
         //if the player has jumped then make hasJumped = to 1
-        if(isJumping == true)
+        if(isGrounded == false)
         {
             hasJumped = 1;
         }
