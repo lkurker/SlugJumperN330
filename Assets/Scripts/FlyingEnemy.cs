@@ -11,6 +11,8 @@ public class FlyingEnemy : MonoBehaviour
     public float seekRange;
     private float slugDistance;
     private Transform currentDirection;
+    private Vector2 startingPosition;
+    private bool hasKilledRecently;
 
     public Transform enemySprite;
 
@@ -24,18 +26,29 @@ public class FlyingEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startingPosition = this.transform.position;
+        //we will set the 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
+
+        //bool to check if the target has recently died
+        hasKilledRecently = PlayerManager.hasDiedRecently;
         
     }
 
     void UpdatePath()
     {
-        if (seeker.IsDone() && slugDistance <= seekRange)
+        if (seeker.IsDone() && slugDistance <= seekRange && hasKilledRecently == false)
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
+        }
+
+        //if the player is not in range or has recently died
+        else if(seeker.IsDone() && (hasKilledRecently == true || slugDistance >= seekRange))
+        {
+            seeker.StartPath(rb.position, startingPosition, OnPathComplete);
         }
     }
 
@@ -52,6 +65,9 @@ public class FlyingEnemy : MonoBehaviour
     {
         //we will constantly be checking the distance between the enemy object and the player
         slugDistance = Vector3.Distance(this.transform.position, target.position);
+
+        //we will keep updating the bool so that slug boy does not continuously get killed
+        hasKilledRecently = PlayerManager.hasDiedRecently;
 
     }
 
@@ -76,7 +92,12 @@ public class FlyingEnemy : MonoBehaviour
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
-        if(slugDistance <= seekRange)
+        if(slugDistance <= seekRange && reachedEndOfPath == false)
+        {
+            rb.AddForce(force);
+        }
+
+        else if((slugDistance >= seekRange || hasKilledRecently == true) && reachedEndOfPath == false)
         {
             rb.AddForce(force);
         }

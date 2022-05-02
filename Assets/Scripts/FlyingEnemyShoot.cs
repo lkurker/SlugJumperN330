@@ -16,16 +16,18 @@ public class FlyingEnemyShoot : MonoBehaviour
     private float fireCountdown = 0f;
     public float shootingRange;
     public float projectileSpeed;
+    private bool hasKilledRecently;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hasKilledRecently = PlayerManager.hasDiedRecently;
     }
 
     // Update is called once per frame
     void Update()
     {
+        hasKilledRecently = PlayerManager.hasDiedRecently;
         //we will check to see if slugboy is within range of the flying enemy's fire range
         if (slug != null)
         {
@@ -33,7 +35,7 @@ public class FlyingEnemyShoot : MonoBehaviour
             float distance = Vector3.Distance(this.transform.position, slug.position);
             Debug.Log("" + distance);
             //now we will check to see if slugboy is within firing range of the enemy
-            if(distance < shootingRange)
+            if(distance < shootingRange && hasKilledRecently == false)
             {
                 Debug.Log("within distance");
                 if (fireCountdown <= 0f)

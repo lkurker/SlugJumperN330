@@ -6972,6 +6972,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 301342212626773832, guid: 2c9e4f25504c05043a0e11ad92c7fc71, type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 301342212626773833, guid: 2c9e4f25504c05043a0e11ad92c7fc71, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7020,6 +7024,10 @@ PrefabInstance:
       propertyPath: slugBoy
       value: 
       objectReference: {fileID: 1280718953}
+    - target: {fileID: 301342212626773834, guid: 2c9e4f25504c05043a0e11ad92c7fc71, type: 3}
+      propertyPath: pullBack
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 301342212626773838, guid: 2c9e4f25504c05043a0e11ad92c7fc71, type: 3}
       propertyPath: m_Name
       value: Main Camera

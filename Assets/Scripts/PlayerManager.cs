@@ -8,11 +8,17 @@ public class PlayerManager : MonoBehaviour
 
     private AudioSource SlugSplat1;
 
+    //static bool to indicate if the player has died recently
+    public static bool hasDiedRecently;
+
+    public float killCooldown = 5;
+
     
 
     // Start is called before the first frame update
     void Start()
     {
+        hasDiedRecently = false;
         SlugSplat1 = GameObject.FindGameObjectWithTag("PlayerDeathSound").GetComponent<AudioSource>();
     }
 
@@ -28,12 +34,19 @@ public class PlayerManager : MonoBehaviour
             SlugSplat1.Play();
        }
 
+        //check to see if slugboy has recently died
+        if(hasDiedRecently == true)
+        {
+            Invoke("canKillAgain", killCooldown);
+        }
+
 
     }
 
     //respawn method that places slug boi back at the last checkpoint
     void Respawn()
     {
+        hasDiedRecently = true;
         this.gameObject.SetActive(false);
         SlugSplat1.Play();
         //delay the respawning of slug boy
@@ -64,5 +77,10 @@ public class PlayerManager : MonoBehaviour
         this.gameObject.SetActive(true);
         this.transform.position = lastCheckPointPos;
 
+    }
+
+    void canKillAgain()
+    {
+        hasDiedRecently = false;
     }
 }
