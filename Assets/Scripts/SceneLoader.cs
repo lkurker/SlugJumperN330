@@ -15,27 +15,27 @@ public class SceneLoader : MonoBehaviour
     {
     // change to the game scene
         // we will base which level the player will continue on from the playerprefs
-        if(PlayerPrefs.GetInt("lastLevelPlayed") == 2)
+        if(PlayerPrefs.GetInt("lastLevelPlayed") == 1)
         {
             SceneManager.LoadScene("LevelOne");
         }
-        else if(PlayerPrefs.GetInt("lastLevelPlayed") == 4)
+        else if(PlayerPrefs.GetInt("lastLevelPlayed") == 3)
         {
             SceneManager.LoadScene("LevelTwo");
         }
-        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 5)
+        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 4)
         {
             SceneManager.LoadScene("LevelThree");
         }
-        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 6)
+        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 5)
         {
             SceneManager.LoadScene("LevelFive");
         }
-        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 7)
+        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 6)
         {
             SceneManager.LoadScene("LevelSix");
         }
-        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 8)
+        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 7)
         {
             SceneManager.LoadScene("LevelSeven");
         }
