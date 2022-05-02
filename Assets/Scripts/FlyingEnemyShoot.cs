@@ -6,7 +6,7 @@ public class FlyingEnemyShoot : MonoBehaviour
 {
 
     //public transform that will track the player
-    public Transform slug;
+    private Transform slug;
     public GameObject projectile;
 
     [Header("FiringAttributes")]
@@ -17,10 +17,13 @@ public class FlyingEnemyShoot : MonoBehaviour
     public float shootingRange;
     public float projectileSpeed;
     private bool hasKilledRecently;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        slug = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = this.GetComponent<Animator>();
         hasKilledRecently = PlayerManager.hasDiedRecently;
     }
 
@@ -37,14 +40,26 @@ public class FlyingEnemyShoot : MonoBehaviour
             //now we will check to see if slugboy is within firing range of the enemy
             if(distance < shootingRange && hasKilledRecently == false)
             {
+                if(fireCountdown <= 1f)
+                {
+                    animator.SetBool("chargingShot", true);
+                }
                 
+
                 if (fireCountdown <= 0f)
                 {
+                    animator.SetBool("chargingShot", false);
                     Shoot();
                     fireCountdown = 1f / fireRate;
                 }
 
                 fireCountdown -= Time.deltaTime;
+            }
+
+            else
+            {
+                animator.SetBool("chargingShot", false);
+                fireCountdown = 1f / fireRate;
             }
         }
     }

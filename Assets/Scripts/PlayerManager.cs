@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
     {
         SlugSplat1 = GameObject.FindGameObjectWithTag("PlayerDeathSound").GetComponent<AudioSource>();
 
-        if (this.transform.position.y < -10)
+        if (this.transform.position.y < -20)
        {
             Respawn();
 
@@ -56,14 +56,14 @@ public class PlayerManager : MonoBehaviour
     //collision method to determine if the user has come into contact with any hazardous materials in the world
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.tag == "Enemy")
+        if(collision.transform.tag == "Enemy" || collision.transform.tag == "Boss")
         {
             Respawn();
 
             
         }
 
-        if(collision.transform.tag == "Spike")
+        if (collision.transform.tag == "Spike" || collision.transform.tag == "secondSpike")
         {
             Respawn();
 

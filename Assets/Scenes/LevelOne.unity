@@ -1093,10 +1093,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1122283043418119024, guid: cea1f19f7ef96f945a6c17d1f000cb13, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6019d3226907af545bd52bb55b76a0fa, type: 2}
     - target: {fileID: 3161542700699880872, guid: cea1f19f7ef96f945a6c17d1f000cb13, type: 3}
       propertyPath: slug
       value: 
       objectReference: {fileID: 1280718953}
+    - target: {fileID: 3161542700699880872, guid: cea1f19f7ef96f945a6c17d1f000cb13, type: 3}
+      propertyPath: fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3161542700699880873, guid: cea1f19f7ef96f945a6c17d1f000cb13, type: 3}
       propertyPath: target
       value: 

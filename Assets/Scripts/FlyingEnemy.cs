@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class FlyingEnemy : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public float speed;
     public float nextWaypointDistance = 3f;
     public float seekRange;
@@ -26,6 +26,7 @@ public class FlyingEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         startingPosition = this.transform.position;
         //we will set the 
         seeker = GetComponent<Seeker>();
