@@ -36,7 +36,7 @@ public class FlyingEnemyShoot : MonoBehaviour
         {
             //if slugboy is still in the game, calculate the distance
             float distance = Vector3.Distance(this.transform.position, slug.position);
-            Debug.Log("" + distance);
+            
             //now we will check to see if slugboy is within firing range of the enemy
             if(distance < shootingRange && hasKilledRecently == false)
             {
