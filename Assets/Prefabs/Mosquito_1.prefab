@@ -217,4 +217,4 @@ MonoBehaviour:
   firePoint: {fileID: 3161542699334617127}
   fireRate: 1
   shootingRange: 10
-  projectileSpeed: 1000
+  projectileSpeed: 10000

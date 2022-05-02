@@ -10,6 +10,7 @@ public class projectileMovement : MonoBehaviour
     private Vector2 direction;
     private Rigidbody2D rb;
     private float speed;
+    public float killTime = 3f;
 
     void Start()
     {
@@ -20,10 +21,10 @@ public class projectileMovement : MonoBehaviour
     //method to set the target for the player
     public void chaseTarget(Transform _slug, float _speed)
     {
-        Debug.Log("????");
         slug = _slug;
         speed = _speed;
-        direction = slug.position - this.transform.position;
+        direction = (slug.position - this.transform.position).normalized;
+      
         beginFiring = true;
     }
 
@@ -33,10 +34,12 @@ public class projectileMovement : MonoBehaviour
         //if the projectile hasn't hit anything yet
         if(collided == false && beginFiring == true)
         {
-            Debug.Log("IS THIS WORKING?!?!?!");
             //set the velocity of the rigidbody in the direction of the slug
             rb.velocity = direction * speed * Time.deltaTime;
         }
+
+        //after a set amount of time, destroy the gameObject
+        Invoke("destroyBullet", killTime);
     }
 
     //collision method for when the bullet hits something
@@ -47,6 +50,11 @@ public class projectileMovement : MonoBehaviour
             collided = true;
             Destroy(gameObject);
         }
+    }
+
+    void destroyBullet()
+    {
+        Destroy(this.gameObject);
     }
 
 
