@@ -196,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86f715249599354dbb5b073303ef06f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   speed: 400
   nextWaypointDistance: 3
   seekRange: 20
@@ -213,10 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcfae7c649eb3d442b01da96114a3f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slug: {fileID: 0}
   projectile: {fileID: 4683896317029557734, guid: 86cfa543ee1cf234a8f03c28c0587769, type: 3}
   firePoint: {fileID: 3161542699334617127}
-  fireRate: 1
+  fireRate: 0.5
   shootingRange: 10
   projectileSpeed: 10000
 --- !u!95 &1122283043418119024
@@ -229,7 +227,7 @@ Animator:
   m_GameObject: {fileID: 3161542700699880875}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6019d3226907af545bd52bb55b76a0fa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
