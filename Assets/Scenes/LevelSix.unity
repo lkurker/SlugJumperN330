@@ -825,7 +825,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 860520497}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3200959584948649065, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
       propertyPath: m_Name
@@ -833,19 +833,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200959584948649066, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3200959584948649066, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.786614
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3200959584948649066, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.552849
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3200959584948649066, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65995.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3200959584948649066, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1817,7 +1817,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1680132355}
-  - {fileID: 940357021}
   - {fileID: 1899894834}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2082,11 +2081,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4077972835346425395, guid: 7649051a0de3504409ab35f5f053af3e, type: 3}
   m_PrefabInstance: {fileID: 926375633}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &940357021 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3200959584948649066, guid: 51e02f2fd6cb5364dae07e5cde0d6852, type: 3}
-  m_PrefabInstance: {fileID: 315758636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1042164861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2220,7 +2214,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3923112957142298820, guid: c8e1416716a249a4fbd29b5ef5dacf8b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3923112957142298820, guid: c8e1416716a249a4fbd29b5ef5dacf8b, type: 3}
       propertyPath: m_LocalPosition.x
