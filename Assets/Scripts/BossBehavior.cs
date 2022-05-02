@@ -46,10 +46,16 @@ public class BossBehavior : MonoBehaviour
     //check to see if the boss has touched any platforms
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.tag == "Platform" || collision.transform.tag == "Spike")
+        if(collision.transform.tag == "Platform" || collision.transform.tag == "Spike" || collision.transform.tag == "Ground" || collision.transform.tag == "Stem")
         {
             Debug.Log("COLLIDED");
             Destroy(collision.gameObject);
+        }
+
+        //give the boss a speed boost if it hits this object
+        if(collision.transform.tag == "speedBoost")
+        {
+            speed = 23f;
         }
     }
 }

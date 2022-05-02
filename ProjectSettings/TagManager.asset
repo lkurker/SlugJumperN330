@@ -12,6 +12,11 @@ TagManager:
   - PlayerDeathSound
   - PlayerJump
   - PlayerLand
+  - Ground
+  - Stem
+  - secondSpike
+  - speedBoost
+  - Boss
   layers:
   - Default
   - TransparentFX
