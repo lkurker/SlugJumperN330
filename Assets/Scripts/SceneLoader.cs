@@ -27,6 +27,10 @@ public class SceneLoader : MonoBehaviour
         {
             SceneManager.LoadScene("LevelThree");
         }
+        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 6)
+        {
+            SceneManager.LoadScene("LevelFive");
+        }
         else
         {
             SceneManager.LoadScene("LevelOne");
@@ -70,6 +74,24 @@ public class SceneLoader : MonoBehaviour
         // change to level three game scene
         SceneManager.LoadScene("LevelThree");
         // Debug.Log("Launch lvl 3");
+    }
+
+    //level four button
+    public void levelFourSelect()
+    {
+        SceneManager.LoadScene("LevelFive");
+    }
+
+    //level five button
+    public void levelFiveSelect()
+    {
+        SceneManager.LoadScene("LevelSix");
+    }
+
+    //level six button
+    public void levelSixSelect()
+    {
+        SceneManager.LoadScene("LevelSeven");
     }
 
     // back button

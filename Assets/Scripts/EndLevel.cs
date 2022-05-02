@@ -39,7 +39,7 @@ public class EndLevel : MonoBehaviour
         //int value that keeps track of what level the player is currently on
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
 
-        if(currentLevel == 2)
+        if(currentLevel == 3)
         {
             SceneManager.LoadScene("LevelTwo");
         }
