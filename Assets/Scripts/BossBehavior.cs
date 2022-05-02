@@ -9,7 +9,7 @@ public class BossBehavior : MonoBehaviour
     private Transform target;
     private int wavePointIndex;
     public float speed;
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,6 @@ public class BossBehavior : MonoBehaviour
     {
         if(collision.transform.tag == "Platform" || collision.transform.tag == "Spike" || collision.transform.tag == "Ground" || collision.transform.tag == "Stem")
         {
-            Debug.Log("COLLIDED");
             Destroy(collision.gameObject);
         }
 

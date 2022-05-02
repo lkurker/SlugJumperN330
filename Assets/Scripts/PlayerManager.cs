@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerManager : MonoBehaviour
 
     public float killCooldown = 5;
 
+
     
 
     // Start is called before the first frame update
@@ -20,6 +22,8 @@ public class PlayerManager : MonoBehaviour
     {
         hasDiedRecently = false;
         SlugSplat1 = GameObject.FindGameObjectWithTag("PlayerDeathSound").GetComponent<AudioSource>();
+        
+        
     }
 
     // Update is called once per frame
@@ -39,6 +43,8 @@ public class PlayerManager : MonoBehaviour
         {
             Invoke("canKillAgain", killCooldown);
         }
+
+        
 
 
     }
@@ -74,8 +80,20 @@ public class PlayerManager : MonoBehaviour
     //set slugboy back to his previous position
     void lastCheckpointReached()
     {
-        this.gameObject.SetActive(true);
-        this.transform.position = lastCheckPointPos;
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentLevel == 6)
+        {
+            Debug.Log("LOAD SCENE");
+            SceneManager.LoadScene("BossLevel");
+        }
+
+        else
+        {
+            this.gameObject.SetActive(true);
+            this.transform.position = lastCheckPointPos;
+        }
+        
 
     }
 
