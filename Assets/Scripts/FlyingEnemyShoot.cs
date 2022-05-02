@@ -37,7 +37,7 @@ public class FlyingEnemyShoot : MonoBehaviour
             //now we will check to see if slugboy is within firing range of the enemy
             if(distance < shootingRange && hasKilledRecently == false)
             {
-                Debug.Log("within distance");
+                
                 if (fireCountdown <= 0f)
                 {
                     Shoot();
