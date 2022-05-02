@@ -47,6 +47,22 @@ public class EndLevel : MonoBehaviour
         {
             SceneManager.LoadScene("LevelThree");
         }
+        else if(currentLevel == 5)
+        {
+            SceneManager.LoadScene("LevelFive");
+        }
+        else if (currentLevel == 6)
+        {
+            SceneManager.LoadScene("LevelSix");
+        }
+        else if (currentLevel == 7)
+        {
+            SceneManager.LoadScene("LevelSeven");
+        }
+        else if (currentLevel == 8)
+        {
+            SceneManager.LoadScene("BossLevel");
+        }
         else
         {
             Time.timeScale = 1f;
