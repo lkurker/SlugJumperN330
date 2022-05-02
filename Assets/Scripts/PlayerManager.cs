@@ -82,7 +82,7 @@ public class PlayerManager : MonoBehaviour
     {
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
 
-        if (currentLevel == 6)
+        if (currentLevel == 9)
         {
             Debug.Log("LOAD SCENE");
             SceneManager.LoadScene("BossLevel");

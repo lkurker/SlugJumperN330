@@ -31,6 +31,14 @@ public class SceneLoader : MonoBehaviour
         {
             SceneManager.LoadScene("LevelFive");
         }
+        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 7)
+        {
+            SceneManager.LoadScene("LevelSix");
+        }
+        else if (PlayerPrefs.GetInt("lastLevelPlayed") == 8)
+        {
+            SceneManager.LoadScene("LevelSeven");
+        }
         else
         {
             SceneManager.LoadScene("LevelOne");
