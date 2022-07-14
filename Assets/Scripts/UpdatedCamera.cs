@@ -9,6 +9,8 @@ public class UpdatedCamera : MonoBehaviour
     public float smoothness;
     public float pullBack;
     public float cameraMomentum;
+    public float lookMomentum;
+
     private float newXposition;
     private float newYposition;
   
@@ -19,7 +21,7 @@ public class UpdatedCamera : MonoBehaviour
     private Vector3 offset;
 
     //private floats for looking up and down
-    private float upDirection;
+    public float upDirection;
     private float downDirection;
     
     
@@ -30,8 +32,7 @@ public class UpdatedCamera : MonoBehaviour
         moveLeft = 5;
         offset = new Vector3(0, 0, pullBack);
 
-        upDirection = 5;
-        downDirection = -5;
+        downDirection = upDirection * -1;
 
         //we will convert the reverse x transformation of the camera to be the negative value of the xDistance value that the user already put in
         reversexDistance = xDistance * -1;
@@ -134,7 +135,7 @@ public class UpdatedCamera : MonoBehaviour
     {
         if(newYposition < upDirection)
         {
-            newYposition += cameraMomentum * Time.deltaTime;
+            newYposition += lookMomentum * Time.deltaTime;
             offset = new Vector3(newXposition, newYposition, pullBack);
             Follow();
         }
@@ -145,7 +146,7 @@ public class UpdatedCamera : MonoBehaviour
     {
         if (newYposition > downDirection)
         {
-            newYposition -= cameraMomentum * Time.deltaTime;
+            newYposition -= lookMomentum * Time.deltaTime;
             offset = new Vector3(newXposition, newYposition, pullBack);
             Follow();
         }

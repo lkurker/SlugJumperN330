@@ -184,3 +184,5 @@ MonoBehaviour:
   smoothness: 7
   pullBack: -10
   cameraMomentum: 2
+  lookMomentum: 4
+  upDirection: 2.5
