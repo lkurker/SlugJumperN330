@@ -6999,6 +6999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_Layer_Corner
       objectReference: {fileID: 0}
+    - target: {fileID: 1768195829157455148, guid: e373c1f508c4f3e4a8aaaebbf4aa8353, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f13de9711d6534c9abc8a0da03126c96, type: 3}
     - target: {fileID: 1768195829157455149, guid: e373c1f508c4f3e4a8aaaebbf4aa8353, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7009,7 +7013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768195829157455149, guid: e373c1f508c4f3e4a8aaaebbf4aa8353, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.48
+      value: 2.42
       objectReference: {fileID: 0}
     - target: {fileID: 1768195829157455149, guid: e373c1f508c4f3e4a8aaaebbf4aa8353, type: 3}
       propertyPath: m_LocalPosition.z
